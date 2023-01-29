@@ -8,15 +8,15 @@ class Funcionario extends Pessoa{
     if ($this->trabalhando){
       $this->setSetor($t);
       if ($this->getSexo() == "M") {
-        echo "<p>- Parabéns! " . $this->getNome() . " foi contratado para o cargo de " . $t . "!</p>";
+        echo "<p>- Parabéns! <strong>" . $this->getNome() . "</strong> foi contratado para o cargo de " . $t . "!</p>";
       } else {
-        echo "<p>- Parabéns! " . $this->getNome() . " foi contratada para o cargo de " . $t . "!</p>";
+        echo "<p>- Parabéns! <strong>" . $this->getNome() . "</strong> foi contratada para o cargo de " . $t . "!</p>";
       }
       
     } elseif ($this->getSexo() == "M") {
-      echo "<p>ERRO: Não é possível mudar de setor pois " . $this->getNome() . " está desempregado!</p>";
+      echo "<p>ERRO: Não é possível mudar de setor pois <strong>" . $this->getNome() . "</strong> está desempregado!</p>";
     } else {
-      echo "<p>ERRO: Não é possível mudar de setor pois " . $this->getNome() . " está desempregada!</p>";
+      echo "<p>ERRO: Não é possível mudar de setor pois <strong>" . $this->getNome() . "</strong> está desempregada!</p>";
     }
   }
 

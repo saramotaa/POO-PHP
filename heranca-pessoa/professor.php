@@ -10,7 +10,7 @@ class Professor extends Pessoa{
 
   public function receberAum($v){
     $this->salario += $v;
-    echo "<p>- " . $this->getNome() . " recebeu um aumento de R$" . $v . ",00 e agora recebe um salário de R$" . $this->salario .  ",00!</p>";
+    echo "<p>- <strong>" . $this->getNome() . "</strong> recebeu um aumento de <strong>R$" . $v . ",00</strong> e agora recebe um salário de <strong>R$" . $this->salario .  ",00</strong>!</p>";
   }
 
   public function getEspecialidade(){

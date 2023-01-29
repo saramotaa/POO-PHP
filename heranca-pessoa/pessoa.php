@@ -1,13 +1,13 @@
 <?php
 
-class Pessoa{
+abstract class Pessoa{
   private $nome;
   private $idade;
   private $sexo;
 
-  public function fazerAniv(){
+   public final function fazerAniv(){
     $this->idade ++;
-    echo "<p>- Feliz aniversário, " . $this->getNome() . "! Agora você está completando " . $this->getIdade() . " anos!</p>";
+    echo "<p>- Feliz aniversário, <strong>" . $this->getNome() . "</strong>! Agora você está completando <strong>" . $this->getIdade() . "</strong> anos!</p>";
   }
 
   public function __construct($no, $id, $se){

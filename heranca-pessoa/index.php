@@ -12,38 +12,62 @@
       require_once 'funcionario.php';
       require_once 'professor.php';
       require_once 'pessoa.php'; //$no, $id, $se
+      require_once 'visitante.php';
+      require_once 'bolsista.php';
+      require_once 'tecnico.php';
 
-      $p1 = new Pessoa("Gabriel", 23, "M");
-      $p2 = new Aluno();
-      $p3 = new Professor();
-      $p4 = new Funcionario();
+      $a1 = new Aluno("Sara", 20, "F");
+      $p1 = new Professor();
+      $f1 = new Funcionario();
+      $v1 = new Visitante("Gabriel", 23, "M");
+      $b1 = new Bolsista(900);
+      $t1 = new Tecnico(68465174);
 
-      $p1->fazerAniv();
+      $v1->fazerAniv();
       
-      $p2->setNome("Sara");
-      $p2->setIdade(20);
-      $p2->setSexo("F");
-      $p2->setMatr("1249");
-      $p2->setCurso("Ciência da Computação");
+      $a1->setNome("Sara");
+      $a1->setIdade(20);
+      $a1->setSexo("F");
+      $a1->setMatr("1249");
+      $a1->setCurso("Ciência da Computação");
+      $a1->pagarMensal();
 
-      $p3->setNome("Pedro");
-      $p3->setIdade(24);
-      $p3->setSexo("M");
-      $p3->setEspecialidade("Programação Orientada a Objetos");
-      $p3->receberAum(520);
+      $p1->setNome("Pedro");
+      $p1->setIdade(24);
+      $p1->setSexo("M");
+      $p1->setEspecialidade("Programação Orientada a Objetos");
+      $p1->receberAum(520);
 
-      $p4->setNome("Mariana");
-      $p4->setIdade(28);
-      $p4->setSexo("F");
-      $p4->contratado("Advogada");
-      $p4->mudarTrabalho("Profissional da beleza");
-      $p4->demitido();
-      $p4->mudarTrabalho("Profissional da beleza");
+      $f1->setNome("Mariana");
+      $f1->setIdade(28);
+      $f1->setSexo("F");
+      $f1->contratado("Advogada");
+      $f1->mudarTrabalho("Profissional da beleza");
+      $f1->demitido();
+      $f1->mudarTrabalho("Profissional da beleza");
 
-      print_r($p1);
-      print_r($p2);
-      print_r($p3);
-      print_r($p4);
+      $b1->setNome("Fernanda");
+      $b1->setIdade(27);
+      $b1->setSexo("F");
+      $b1->setCurso("Sistemas de Informação");
+      $b1->setMatr(1478);
+      $b1->renovarBolsa(90); //porcentagem
+      $b1->pagarMensal();
+
+      $t1->setNome("Enzo");
+      $t1->setIdade(16);
+      $t1->setSexo("M");
+      $t1->setCurso("Computação");
+      $t1->setMatr(1367);
+      $t1->pagarMensal(450);
+      $t1->praticar();
+
+      // print_r($v1);
+      // print_r($a1);
+      // print_r($p1);
+      // print_r($f1);
+      // print_r($b1);
+      print_r($t1);
     ?>
     </pre>
   </body>
